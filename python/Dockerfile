@@ -1,7 +1,10 @@
 FROM python:3.6-stretch
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/py
+
+COPY python/requirements.txt /usr/src/app/python/requirements.txt
+RUN pip install --no-cache-dir -r /usr/src/app/python/requirements.txt
+
 COPY . .
-RUN pip install --no-cache-dir -r requirements.txt
 
 # Run server
 EXPOSE 5000
