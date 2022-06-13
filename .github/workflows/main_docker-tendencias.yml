@@ -7,7 +7,7 @@ name: Build and deploy Python app to Azure Web App - docker-tendencias
 on:
   push:
     branches:
-      - mains
+      - main
   workflow_dispatch:
 
 defaults:
